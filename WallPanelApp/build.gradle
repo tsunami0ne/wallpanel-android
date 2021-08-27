@@ -18,8 +18,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
+//apply plugin: 'com.google.gms.google-services'
 
 
 def versionMajor = 0
@@ -86,17 +85,17 @@ android {
 
     productFlavors {
         def BASE_ENVIRONMENT = "BASE_ENVIRONMENT"
-        dev {
-            dimension "default"
-            buildConfigField "String", BASE_ENVIRONMENT, '"DEV_ENVIRONMENT"'
-            applicationId "com.thanksmister.iot.wallpanel"
-            versionName "${versionMajor}.${versionMinor}.${versionPatch} Build ${versionBuild}-DEV"
-            buildConfigField 'Integer', 'CODE', CODE()
-            buildConfigField 'String', 'HASS_URL', "\"" + HASS_URL() +"\""
-            buildConfigField 'String', 'BROKER', "\"" + BROKER() +"\""
-            buildConfigField 'String', 'BROKER_PASS', "\"" + BROKER_PASS() +"\""
-            buildConfigField 'String', 'BROKER_USERNAME', "\"" + BROKER_USERNAME() +"\""
-        }
+//        dev {
+//            dimension "default"
+//            buildConfigField "String", BASE_ENVIRONMENT, '"DEV_ENVIRONMENT"'
+//            applicationId "com.thanksmister.iot.wallpanel"
+//            versionName "${versionMajor}.${versionMinor}.${versionPatch} Build ${versionBuild}-DEV"
+//            buildConfigField 'Integer', 'CODE', CODE()
+//            buildConfigField 'String', 'HASS_URL', "\"" + HASS_URL() +"\""
+//            buildConfigField 'String', 'BROKER', "\"" + BROKER() +"\""
+//            buildConfigField 'String', 'BROKER_PASS', "\"" + BROKER_PASS() +"\""
+//            buildConfigField 'String', 'BROKER_USERNAME', "\"" + BROKER_USERNAME() +"\""
+//        }
         qa {
             dimension "default"
             buildConfigField "String", BASE_ENVIRONMENT, '"QA_ENVIRONMENT"'
@@ -178,11 +177,6 @@ dependencies {
 
     // Logging
     implementation 'com.jakewharton.timber:timber:4.5.1'
-
-    // Firebase
-    implementation 'com.google.firebase:firebase-core:19.0.0'
-    implementation 'com.google.firebase:firebase-crashlytics:18.0.1'
-    implementation 'com.google.firebase:firebase-analytics:19.0.0'
 
     // Picasso image loading
     implementation 'com.squareup.picasso:picasso:2.71828'
