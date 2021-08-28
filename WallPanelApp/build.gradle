@@ -95,12 +95,14 @@ android {
 //            buildConfigField 'String', 'BROKER', "\"" + BROKER() +"\""
 //            buildConfigField 'String', 'BROKER_PASS', "\"" + BROKER_PASS() +"\""
 //            buildConfigField 'String', 'BROKER_USERNAME', "\"" + BROKER_USERNAME() +"\""
+//            buildConfigField 'Boolean', 'DEBUG_OVERRIDE','true'
 //        }
         qa {
             dimension "default"
             buildConfigField "String", BASE_ENVIRONMENT, '"QA_ENVIRONMENT"'
             applicationId "com.thanksmister.iot.wallpanel"
             versionName "${versionMajor}.${versionMinor}.${versionPatch} Build ${versionBuild}-QA"
+            buildConfigField 'Boolean', 'DEBUG_OVERRIDE','true'
         }
         prod {
             dimension "default"
@@ -112,6 +114,7 @@ android {
             buildConfigField 'String', 'BROKER', '""'
             buildConfigField 'String', 'BROKER_USERNAME', '""'
             buildConfigField 'String', 'BROKER_PASS', '""'
+            buildConfigField 'Boolean', 'DEBUG_OVERRIDE','false'
         }
     }
 

@@ -84,7 +84,7 @@ class BrowserActivityNative : BaseBrowserActivity(), LifecycleObserver {
 
         super.onCreate(savedInstanceState)
 
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG_OVERRIDE) {
             configuration.mqttBroker = BuildConfig.BROKER
             configuration.mqttUsername = BuildConfig.BROKER_USERNAME
             configuration.mqttPassword = BuildConfig.BROKER_PASS
