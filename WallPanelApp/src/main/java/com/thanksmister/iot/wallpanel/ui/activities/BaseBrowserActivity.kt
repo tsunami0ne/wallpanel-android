@@ -71,7 +71,6 @@ abstract class BaseBrowserActivity : DaggerAppCompatActivity() {
     private var userPresent: Boolean = false
     private var hasWakeScreen = false
     var displayProgress = true
-    var zoomLevel = 1.0f
 
     // handler for received data from service
     private val mBroadcastReceiver = object : BroadcastReceiver() {
@@ -146,7 +145,6 @@ abstract class BaseBrowserActivity : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         displayProgress = configuration.appShowActivity
-        zoomLevel = configuration.testZoomLevel
 
         window.addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD)
         window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)

@@ -32,7 +32,7 @@ class WallPanel : DaggerApplication() {
 
     override fun onCreate() {
         super.onCreate()
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG_OVERRIDE) {
             Timber.plant(Timber.DebugTree())
         }
         LauncherShortcuts.createShortcuts(this)

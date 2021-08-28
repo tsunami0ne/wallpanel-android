@@ -41,6 +41,7 @@ import androidx.preference.SwitchPreference
 import com.thanksmister.iot.wallpanel.R
 import com.thanksmister.iot.wallpanel.persistence.Configuration.Companion.PREF_SCREENSAVER_DIM_VALUE
 import com.thanksmister.iot.wallpanel.persistence.Configuration.Companion.PREF_SCREEN_BRIGHTNESS
+import com.thanksmister.iot.wallpanel.persistence.Configuration.Companion.PREF_ZOOM
 import com.thanksmister.iot.wallpanel.ui.activities.SettingsActivity.Companion.PERMISSIONS_REQUEST_WRITE_SETTINGS
 import com.thanksmister.iot.wallpanel.ui.views.SettingsCodeView
 import com.thanksmister.iot.wallpanel.utils.DateUtils
@@ -311,6 +312,9 @@ class SettingsFragment : BaseSettingsFragment() {
 
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
         when (key) {
+            PREF_ZOOM -> {
+                configuration.settingsUpdated()
+            }
             PREF_SCREEN_BRIGHTNESS -> {
                 val useBright = screenBrightness?.isChecked
                 if (useBright != null) {

@@ -32,21 +32,21 @@ public class CrashlyticsTree extends Timber.Tree {
 
     @Override
     public void d(String message, Object... args) {
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG_OVERRIDE) {
             Log.println(Log.DEBUG, "AlarmPanel", message);
         }
     }
 
     @Override
     public void i(String message, Object... args) {
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG_OVERRIDE) {
             logMessage(Log.INFO, message, args);
         }
     }
 
     @Override
     public void i(Throwable t, String message, Object... args) {
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG_OVERRIDE) {
             logMessage(Log.INFO, message, args);
         }
         // NOTE: We are explicitly not sending the exception to Crashlytics here.
@@ -54,14 +54,14 @@ public class CrashlyticsTree extends Timber.Tree {
 
     @Override
     public void w(String message, Object... args) {
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG_OVERRIDE) {
             logMessage(Log.WARN, message, args);
         }
     }
 
     @Override
     public void w(Throwable t, String message, Object... args) {
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG_OVERRIDE) {
             logMessage(Log.WARN, message, args);
         }
         // NOTE: We are explicitly not sending the exception to Crashlytics here.
@@ -69,7 +69,7 @@ public class CrashlyticsTree extends Timber.Tree {
 
     @Override
     public void e(String message, Object... args) {
-        if (BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG_OVERRIDE) {
             logMessage(Log.ERROR, message, args);
         }
     }
