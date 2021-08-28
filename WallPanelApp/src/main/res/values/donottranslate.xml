@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) 2019 ThanksMister LLC
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,10 +20,10 @@
     <string name="default_setting_mqtt_sensorfrequency">60</string>
     <string name="key_setting_android_startonboot">setting_android_startonboot</string>
     <string name="key_setting_mqtt_password">setting_mqtt_password</string>
-    <string name="default_setting_mqtt_password">""</string>
+    <string name="default_setting_mqtt_password">tetr1s</string>
     <string name="key_setting_mqtt_sensorfrequency">setting_mqtt_sensorfrequency</string>
     <string name="key_setting_mqtt_username">setting_mqtt_username</string>
-    <string name="default_setting_mqtt_username">""</string>
+    <string name="default_setting_mqtt_username">tablet</string>
     <string name="default_setting_android_startonboot">false</string>
     <string name="key_setting_android_browsertype">setting_android_browsertype</string>
     <string name="key_settings_sensors_light">setting_sensors_light</string>
@@ -41,13 +40,13 @@
     <string name="key_setting_mqtt_serverport">setting_mqtt_serverport</string>
     <string name="default_setting_mqtt_serverport">1883</string>
     <string name="key_setting_mqtt_servername">setting_mqtt_servername</string>
-    <string name="default_setting_mqtt_servername">192.168.1.1</string>
+    <string name="default_setting_mqtt_servername">192.168.86.188</string>
     <string name="key_setting_mqtt_enabled">setting_mqtt_enabled</string>
     <string name="key_setting_mqtt_discovery">setting_mqtt_discovery</string>
     <string name="key_setting_mqtt_discovery_topic">setting_mqtt_discovery_topic</string>
     <string name="key_setting_mqtt_discovery_name">setting_mqtt_discovery_name</string>
     <string name="key_setting_mqtt_tls_enabled">key_setting_mqtt_tls_enabled</string>
-    <string name="default_setting_mqtt_enabled">false</string>
+    <string name="default_setting_mqtt_enabled">true</string>
     <string name="default_setting_mqtt_home_assistant_discovery">false</string>
     <string name="default_setting_mqtt_discovery_topic">homeassistant</string>
     <string name="default_setting_mqtt_tts_enabled">false</string>
@@ -94,7 +93,7 @@
     <string name="key_setting_use_gecko">setting_use_gecko</string>
     <string name="default_setting_app_preventsleep">false</string>
     <string name="key_setting_app_launchurl">setting_app_launchurl</string>
-    <string name="default_setting_app_launchurl">https://thanksmister.github.io/wallpanel-android/</string>
+    <string name="default_setting_app_launchurl">http://192.168.86.66:8080</string>
     <string name="default_setting_app_deviceid">mywallpanel</string>
     <string name="key_setting_app_preventsleep">setting_app_preventsleep</string>
     <string name="key_settings_first_timed">setting_app_first_time</string>
@@ -250,7 +249,7 @@
         <item>3.7</item>
         <item>3.8</item>
         <item>3.9</item>
-        <item>4.0</item>      
+        <item>4.0</item>
     </string-array>
 
     <string-array name="flip_values">
