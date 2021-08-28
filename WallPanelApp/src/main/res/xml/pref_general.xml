@@ -67,7 +67,7 @@
             android:defaultValue="@string/default_setting_test_zoomlevel"
             android:entries="@array/zoom_level_names"
             android:entryValues="@array/zoom_level_values"
-            android:key="@string/key_setting_test_zoomlevel"
+            android:key="@string/key_setting_zoomlevel"
             android:summary="@string/pref_zoom_level_summary"
             android:title="@string/title_setting_test_zoomlevel"/>
 
